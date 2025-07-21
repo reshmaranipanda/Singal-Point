@@ -1,5 +1,7 @@
 @media only screen and (max-width: 1199px) {
-  
+   section {
+  	padding: 10px 0;
+  }
 }
 @media only screen and (max-width: 1024px) {
   body{
@@ -11,7 +13,7 @@
   	right: 4%;
   }
   section {
-  	padding: 60px 0;
+  	padding: 10px 0;
   }
   .slickproject .item .icon, .slickteam .item .icon{
   	opacity: 1;

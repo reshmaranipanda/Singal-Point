@@ -185,6 +185,7 @@
     font-weight: 600;
     line-height: normal;
     margin-bottom: 1.5rem;
+   
     }
     .content{
     line-height: 1.6rem;
@@ -277,13 +278,13 @@
     top: 0px;
     left: 0px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, .5);
-    background: #191919 !important;
+    background: rgb(255, 255, 255) !important;
     -webkit-transition: all .5s cubic-bezier(.165, .84, .44, 1);
     -moz-transition: all .5s cubic-bezier(.165, .84, .44, 1);
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
     }
     body.bg header{
-        background: #111;
+        background: #ffffff;
     }
     .topmenu header.init {
     margin-bottom: -14vh;
@@ -335,7 +336,45 @@ div.container-fluid div.row.p-4-vh {
     height: 45px !important;
     max-height: 50px !important;
 }
+ /* Add this CSS to make logo smaller and left-aligned on mobile */
 
+/* Mobile styles - adjust the max-width value based on your mobile breakpoint */
+@media screen and (max-width: 768px) {
+  .navbar-brand.white img {
+    width: 220px !important; /* Make logo smaller - adjust as needed */
+    height: auto !important;
+  }
+  
+  .navbar-brand.white {
+    text-align: left !important;
+    justify-self: flex-start !important;
+    margin-left: 5px !important; /* Add some left margin */
+  }
+  
+  /* If the navbar has center alignment, override it for mobile */
+  .navbar {
+    justify-content: flex-start !important;
+  }
+  
+  /* Alternative approach if the above doesn't work */
+  .container-fluid .navbar-brand {
+    margin-right: auto !important;
+    margin-left: 5px !important;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media screen and (max-width: 575px) {
+  .navbar-brand.white img {
+    width: 150px !important; /* Even smaller for very small screens */
+    height: 160px!important;
+    margin-left: -25px !important;
+  }
+  
+  .navbar-brand.white {
+    margin-left: 5px !important;
+  }
+}
 
 
 
@@ -344,9 +383,14 @@ div.container-fluid div.row.p-4-vh {
     top: 0px;
     left: 0px;
     z-index: 1;
+      display: flex;
+  align-items: center;  /* Vertically center items */
+  justify-content:space-evenly;  /* Space between logo and other content */
+  padding: 0px 0px; 
     background: rgba(255, 255, 255, 0);
     border-bottom: 1px groove rgba(255, 255, 255, 0);
     width: 100%;
+    margin-bottom: 20px;
     -webkit-transition: all .5s cubic-bezier(.165, .84, .44, 1);
     -moz-transition: all .5s cubic-bezier(.165, .84, .44, 1);
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
@@ -356,7 +400,7 @@ div.container-fluid div.row.p-4-vh {
     }
     .navbar-brand.white {
     position: relative;
-    top: 1px;
+    top: 0px;
     left: 0px;
     padding: 0px;
     margin: 0px;
@@ -366,10 +410,12 @@ div.container-fluid div.row.p-4-vh {
     .navbar-brand.white img {
     width: 100%;
     height: auto;
-    max-height: 125px!important;
+    align-items: center; 
+    max-height: 160px!important;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+    margin-bottom: 20px; 
     -webkit-transition: all .1s ease-in-out;
     -moz-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
@@ -558,16 +604,18 @@ section {
     /***** social-icons *****/
     .social-icons-subnav{
     display: inline-block;
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 600;
     color: #fff;
     }
     .social-icons-subnav span{
     margin-left: 45px;
     padding-left: 30px;
-    top: 3px;
+    top: 16px;
     position: relative;
-    border-left: 3px solid hsla(0,0%,100%,.8);
+    border-left: 3px solid hsla(0, 0%, 0%, 0.8);
+    border-top: #000;
+    color:#000;
     }
     .rightmenu{
     position: fixed;
